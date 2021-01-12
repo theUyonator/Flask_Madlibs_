@@ -3,7 +3,7 @@
 {% block title %}Madlibs Form{% endblock %}
 
 {% block content %}
-<h1>Madlibs</h1>
+<h1>Madlibs for {{title}}</h1>
 
 <form action="/madlib_story">
     {% for prompt in prompts%}
@@ -13,7 +13,7 @@
     </p>
 
     {% endfor %}
-
+    <input type="hidden" name="story_id" value = "{{story_id}}">
     <button type = "submit">Submit</button>
 
 </form>
